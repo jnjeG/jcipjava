@@ -8,15 +8,16 @@ package net.jcip.examples;
  * @author Brian Goetz and Tim Peierls
  */
 public class CountingSheep {
-    volatile boolean asleep;
+    public volatile boolean asleep;
 
-    void tryToSleep() {
+    public void tryToSleep() {
         while (!asleep)
             countSomeSheep();
     }
 
-    void countSomeSheep() {
+    private void countSomeSheep() {
         // One, two, three...
+      System.out.println("counting sheep...");
     }
 }
 
