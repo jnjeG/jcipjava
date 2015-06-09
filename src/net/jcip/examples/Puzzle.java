@@ -15,7 +15,7 @@ import java.util.*;
  */
 public interface Puzzle <P, M> {
   /**
-   * If P represent one box's position,then this method may initial one position.
+   * If P represent one box's position,then this method may initial one position. 
    * Otherwise,if P represent a series of nodes,then this method should initial all boxes' position.
    * @return
    */

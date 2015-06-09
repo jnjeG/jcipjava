@@ -12,7 +12,7 @@ import java.util.*;
 
 public class SequentialPuzzleSolver <P, M> {
     private final Puzzle<P, M> puzzle;
-    private final Set<P> seen = new HashSet<P>();//`seen` means positions that already known  @author chenjunjie 
+    private final Set<P> seen = new HashSet<P>();//`seen`  means positions that already known  @author chenjunjie 
 
     public SequentialPuzzleSolver(Puzzle<P, M> puzzle) {
         this.puzzle = puzzle;
