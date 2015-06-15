@@ -10,7 +10,7 @@ import junit.framework.TestCase;
  * <p/>
  * Producer-consumer test program for BoundedBuffer
  *
- * @author Brian Goetz and Tim Peierls
+ * @author Brian Goetz and Tim Peierls 
  */
 public class PutTakeTest extends TestCase {
     protected static final ExecutorService pool = Executors.newCachedThreadPool();
