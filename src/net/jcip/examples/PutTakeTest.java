@@ -38,8 +38,8 @@ public class PutTakeTest extends TestCase {
                 pool.execute(new Producer());
                 pool.execute(new Consumer());
             }
-            barrier.await(); // wait for all threads to be ready
-            barrier.await(); // wait for all threads to finish
+            barrier.await(); // wait for all threads to be ready. new CyclicBarrier(npairs * 2 + 1); "+1" is used here.
+            barrier.await(); // wait for all threads to finish. new CyclicBarrier(npairs * 2 + 1); "+1" is used here.
             assertEquals(putSum.get(), takeSum.get());
         } catch (Exception e) {
             throw new RuntimeException(e);

@@ -14,13 +14,13 @@ public class TestBoundedBuffer extends TestCase {
     private static final int CAPACITY = 10000;
     private static final int THRESHOLD = 10000;
 
-    void testIsEmptyWhenConstructed() {
+    public void testIsEmptyWhenConstructed() {
         SemaphoreBoundedBuffer<Integer> bb = new SemaphoreBoundedBuffer<Integer>(10);
         assertTrue(bb.isEmpty());
         assertFalse(bb.isFull());
     }
 
-    void testIsFullAfterPuts() throws InterruptedException {
+    public void testIsFullAfterPuts() throws InterruptedException {
         SemaphoreBoundedBuffer<Integer> bb = new SemaphoreBoundedBuffer<Integer>(10);
         for (int i = 0; i < 10; i++)
             bb.put(i);
@@ -29,7 +29,7 @@ public class TestBoundedBuffer extends TestCase {
     }
 
 
-    void testTakeBlocksWhenEmpty() {
+    public void testTakeBlocksWhenEmpty() {
         final SemaphoreBoundedBuffer<Integer> bb = new SemaphoreBoundedBuffer<Integer>(10);
         Thread taker = new Thread() {
             public void run() {
